@@ -1,0 +1,195 @@
+:root {
+  --fresh-sky: #00a6fb;
+  --steel-blue: #0582ca;
+  --baltic-blue: #006494;
+  --deep-space-blue: #003554;
+  --ink-black: #031016;
+
+  --text: #eaf6ff;
+  --muted: #9bbbd1;
+}
+
+body {
+  background: var(--ink-black);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--fresh-sky);
+}
+
+/* SOCIAL */
+.socials a {
+  margin-left: 15px;
+  font-size: 22px;
+  color: var(--muted);
+}
+
+.socials a:hover {
+  color: var(--fresh-sky);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 0;
+}
+
+.top-text {
+  color: var(--fresh-sky);
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.desc {
+  color: var(--steel-blue);
+}
+
+/* SECTION */
+.section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.about p {
+  max-width: 650px;
+  margin: 10px auto;
+  color: var(--muted);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--deep-space-blue);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px var(--fresh-sky);
+}
+
+.card span {
+  color: var(--muted);
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 30px;
+}
+
+.stats h3 {
+  color: var(--fresh-sky);
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.primary {
+  background: var(--fresh-sky);
+  color: black;
+}
+
+.outline {
+  border: 1px solid var(--fresh-sky);
+  color: var(--fresh-sky);
+}
+
+/* CONTACT */
+.contact input,
+.contact textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: #021018;
+  border: 1px solid var(--deep-space-blue);
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: var(--muted);
+}
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav nav {
+    margin-top: 10px;
+  }
+
+  .nav a {
+    margin: 10px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
